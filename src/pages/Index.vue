@@ -2,8 +2,8 @@
   <Layout>
     <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
       <div class="text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left">
-        <div class="leading-tight">Gridsome Portfolio Starter</div>
-        <div class="text-green-700 leading-tight">Powered by Vue.js &amp; Tailwind v1</div>
+        <div class="leading-tight">Hi, My name is Brian, We say Karibu sana, in Swahili to mean welcome.</div>
+        <!-- <div class="text-green-700 leading-tight">I use NodeJs and Kotlin to make intuitive applications</div> -->
       </div>
       <div class="mt-8 sm:mt-0">
         <g-image src="../../static/developer.svg" alt="hero" class="mx-auto sm:mx-0" />
@@ -33,20 +33,28 @@
 
         <ul class="text-lg sm:text-xl">
           <li class="checkmark mb-6">
-            <div>Project One</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+            <div>Jobshack API</div>
+            <div class="text-lg text-gray-600">This is a job site api that I built to use for JobShack.com a site for searching and getting jobs based on the needs of the clients. It supports full text search, locations, remote work uploading files and user profiles. It is made using Nodejs with express and MongoDB</div>
           </li>
           <li class="checkmark mb-6">
-            <div>Project Two</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+            <div>Job Shack Application</div>
+            <div class="text-lg text-gray-600">This is the website application that consumes data from the JobShack api. It uses Angular framework and Nebular UI framework</div>
           </li>
           <li class="checkmark mb-6">
-            <div>Project Three</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+            <div>Shade Tree API</div>
+            <div class="text-lg text-gray-600">This is by far the biggest api I have built so far because it uses the best way I found for security, maintainance and scalability. It is using Express and mongoDB as the Dtabase provider.</div>
           </li>
           <li class="checkmark mb-6">
-            <div>Project Four</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
+            <div>Shade Tree Website</div>
+            <div class="text-lg text-gray-600">This is a website built using Vue. It uses The Shade tree api for its CRUD operations. It also makes use of a centralized store using vuex.</div>
+          </li>
+          <li class="checkmark mb-6">
+            <div>RedArc</div>
+            <div class="text-lg text-gray-600">This is a simple hotel website that makes heavy use of parallax for a compelling, interactive site. The potential visitors can make reservations from the website and the menu. Built using HTML, CSS and compiled using Gulp</div>
+          </li>
+          <li class="checkmark mb-6">
+            <div>FinAdv</div>
+            <div class="text-lg text-gray-600">This is a site for any financial advisors who want to make better communication with the customer by giving them convinience. The customer can check for various insurance packages read benefits about each selected package and get an estimate based on the amount and time period.</div>
           </li>
 
         </ul>
@@ -63,11 +71,7 @@
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
           <div><g-image src="../../static/avatar.jpg" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
-          <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
-        </div>
-
-        <div class="responsive-container">
-          <iframe class="responsive-iframe w-full h-full top-0 left-0 border-0" src="https://www.youtube.com/embed/uHo6o1TNQeE" style="border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="flex-1 text-lg sm:text-xl ml-6">During my free time I like cooking and riding a bike as a form of exercise. I also love animals so I also take time to read about their biology. Plans underway to build an application to help farmers be more productive by handling and keeping their animals well.</div>
         </div>
       </div> <!-- end get-to-know me -->
     </div>
@@ -81,7 +85,7 @@
             <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
           </div>
 
-          <p class="mb-12">Static sites cannot submit forms on their own. However, services like <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> or <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.</p>
+         <!--  <p class="mb-12">Static sites cannot submit forms on their own. However, services like <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> or <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.</p> -->
 
           <div class="text-lg sm:text-lg mb-16">
             <form action="#" class="mb-12">
@@ -125,7 +129,7 @@
         <h2 class="text-2xl font-bold mb-8">Join my Newsletter</h2>
 
         <div class="w-4/5 mx-auto mb-8">
-          <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, voluptatum. Quam, deleniti nulla.</p>
+          <p class="mb-8 text-lg sm:text-xl">Get updates on new vue and Kotlin tuts</p>
 
           <form action="#">
             <div class="flex flex-col sm:flex-row">
@@ -149,7 +153,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'findBrianDev - Home'
   }
 }
 </script>
