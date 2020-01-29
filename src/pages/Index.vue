@@ -88,7 +88,7 @@
          <!--  <p class="mb-12">Static sites cannot submit forms on their own. However, services like <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> or <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.</p> -->
 
           <div class="text-lg sm:text-lg mb-16">
-            <form name="contact" class="mb-12" netlify>
+            <form class="mb-12" name="contact" method="POST" data-netlify="true">
               <div class="flex flex-wrap mb-6 -mx-4">
                   <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                       <label class="block mb-2 text-copy-primary" for="name">
@@ -131,7 +131,7 @@
         <div class="w-4/5 mx-auto mb-8">
           <p class="mb-8 text-lg sm:text-xl">Get updates on new vue and Kotlin tuts</p>
 
-          <form name="subscription" netlify>
+          <form name="subscription" method="POST" data-netlify="true">
             <div class="flex flex-col sm:flex-row">
               <input type="email" name="email" placeholder="Your email address" class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10" required>
               <button data-element="submit" class="flex-2 w-40 uppercase bg-green-700 text-white rounded sm:rounded-l-none text-lg py-3 px-8 tracking-wide shadow focus:outline-none hover:bg-green-800 focus:bg-green-800 z-10 w-full sm:w-auto mt-4 sm:mt-0">
