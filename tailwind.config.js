@@ -61,7 +61,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Open Sans',
+        'Nunito sans',
         'Roboto',
         '-apple-system',
         'BlinkMacSystemFont',
