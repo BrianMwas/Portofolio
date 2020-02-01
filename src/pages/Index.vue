@@ -6,7 +6,7 @@
         <!-- <div class="text-green-700 leading-tight">I use NodeJs and Kotlin to make intuitive applications</div> -->
       </div>
       <div class="mt-8 sm:mt-0">
-        <g-image src="../../static/developer.svg" alt="hero" class="mx-auto sm:mx-0" />
+        <g-image src="../../static/dev.png alt="hero" class="mx-auto sm:mx-0" />
       </div>
     </div> <!-- end hero -->
 
