@@ -2,7 +2,7 @@
   <Layout>
     <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
       <div class="text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left">
-        <div class="leading-tight">Hi, My name is Brian, We say Karibu sana, in Swahili to mean welcome.</div>
+        <div class="leading-tight">Hi, I am a fullstack developer and technical writer.</div>
         <!-- <div class="text-green-700 leading-tight">I use NodeJs and Kotlin to make intuitive applications</div> -->
       </div>
       <div class="mt-8 sm:mt-0">
@@ -11,7 +11,8 @@
     </div> <!-- end hero -->
 
     <div class="container-inner mx-auto">
-      <p class="text-lg sm:text-xl">This gridsome theme was forked from my <a href="https://andremadarang.com">personal website</a>. I added more features and decided to release it as an open source project. Check it out on <a href="https://github.com/drehimself/gridsome-portfolio-starter">GitHub</a> or check out the <a href="https://www.youtube.com/watch?v=uHo6o1TNQeE">screencast I did</a>. Feel free to use it for your own site or projects! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, repellat. Dolores iure, quas perspiciatis rerum quaerat atque eum repellat autem.</p>
+      <p class="text-lg sm:text-xl">I am a fullstack developer with basis in vue and angular for the frontend and Express on the backend. I also work with Kotlin and its framework Ktor. I contribute to Alligator.IO by writing articles about vue, express, nodejs for better web development.
+      </p>
 
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
@@ -88,14 +89,55 @@
          <!--  <p class="mb-12">Static sites cannot submit forms on their own. However, services like <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> or <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.</p> -->
 
           <div class="text-lg sm:text-lg mb-16">
-            <form class="mb-12" name="contact" method="POST" data-netlify="true">
+            <form class="mb-12" 
+                  name="contact"
+                  method="post"
+                  v-on:submit.prevent="handleSubmit"
+                  action="/success/"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  >
+
+                 <!--  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>
+      Don’t fill this out: <input name="bot-field" />
+    </label>
+  </p>
+  <div class="sender-info">
+    <div>
+      <label for="name" class="label" >Your name</label>
+      <input type="text" name="name" v-model="formData.name" />
+    </div>
+    <div>
+      <label for="email">Your email</label>
+      <input type="email" name="email" v-model="formData.email" />
+    </div>
+  </div>
+
+  <div class="message-wrapper">
+    <label for="message">Message</label>
+    <textarea name="message" v-model="formData.message"></textarea>
+  </div> -->
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don’t fill this out: <input name="bot-field" />
+                    </label>
+                  </p>
               <div class="flex flex-wrap mb-6 -mx-4">
+                <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don’t fill this out: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                       <label class="block mb-2 text-copy-primary" for="name">
                           Name
                       </label>
 
-                      <input type="text" name="name" id="name" placeholder="Jon Snow" class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4" required>
+                      <input type="text" v-model="formData.name" name="name" id="name" placeholder="Jon Snow" class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4" required>
                   </div>
 
                   <div class="w-full px-4 md:w-1/2">
@@ -103,7 +145,7 @@
                           Email Address
                       </label>
 
-                      <input type="email" name="email" id="email" placeholder="email@example.com"  class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4" required>
+                      <input type="email" name="email" v-model="formData.email" id="email" placeholder="email@example.com"  class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4" required>
                   </div>
               </div>
 
@@ -112,7 +154,7 @@
                       Message
                   </label>
 
-                  <textarea id="message" rows="5" name="message" class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4" placeholder="Enter your message here." required></textarea>
+                  <textarea id="message" v-model="formData.message" rows="5" name="message" class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4" placeholder="Enter your message here." required></textarea>
               </div>
 
               <div class="flex justify-end w-full">
@@ -154,6 +196,30 @@
 export default {
   metaInfo: {
     title: 'findBrianDev - Home'
+  },
+  data () {
+    return {
+      formData: {},
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => this.$router.push('/success'))
+      .catch(error => alert(error))
+    }
   }
 }
 </script>
