@@ -780,6 +780,13 @@
     sort-package-json "^1.15.0"
     update-notifier "^3.0.1"
 
+"@gridsome/plugin-google-analytics@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/plugin-google-analytics/-/plugin-google-analytics-0.1.1.tgz#f2f37d97dd8559fd7c4d409a6335d07e1b4be19f"
+  integrity sha512-cJ1+bqhGMDf3ZlmGNOWj1dVXitQA2ziGiR22RTv2jsX3bby1pvz8C2mentVE3ZzSKJoSQJHvlazjXmzWcifneg==
+  dependencies:
+    vue-analytics "^5.16.1"
+
 "@gridsome/plugin-sitemap@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.2.3.tgz#44c2655d97349f8a02a76a38452313442b6cdab5"
@@ -9128,6 +9135,11 @@ vm-browserify@^1.0.1:
   version "4.0.1"
   resolved "https://github.com/octref/vscode-textmate#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
 
+vue-analytics@^5.16.1:
+  version "5.22.1"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.22.1.tgz#9d6b32da56daee1b9dfb23a267b50349a03f710f"
+  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
+
 vue-fuse@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-2.2.0.tgz#b58b7197d2c92acb241b0c3263be56e3a80d7c94"
@@ -9448,9 +9460,9 @@ yaml-loader@^0.5.0:
     js-yaml "^3.5.2"
 
 yargs-parser@^13.1.1:
-  version "13.1.1"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz#d26058532aa06d365fe091f6a1fc06b2f7e5eca0"
-  integrity sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==
+  version "13.1.2"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.2.tgz#130f09702ebaeef2650d54ce6e3e5706f7a4fb38"
+  integrity sha512-3lbsNRf/j+A4QuSZfDRA7HRSfWrzO0YjqTJd5kjAq37Zep1CEgaYmrH9Q3GwPiB9cHyd1Y1UwggGhJGoxipbzg==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
